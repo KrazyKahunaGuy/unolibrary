@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}All Books{% endblock %}
+
+{% block body %}
+
+  <main role="main" class="container">
+
+    <div class="intro">
+      <h1>Available Books</h1>
+      <p class="lead">This are the books currently present in our collection<br> Browse through.</p>
+    </div>
+      <section id="all-books" class="all-books-section">
+          <div class="container">
+              <div class="row">
+                  
+                  {% for book in books %}
+
+                  <div class="col-md-10 col-sm-10" id=paginate>
+                      <div class="all-book-section text-center waves-effect">
+                          <h4>{{ book.book_title }} </h4>
+                          <span> {{ book.author_name }}</span>
+                          <div class="border"></div>
+                          <p>{{ book.summary }}</p>
+                      </div>
+                  </div>
+                  {% endfor %}
+
+                  
+              </div><!-- /.row -->            
+              
+          </div><!-- /.container -->
+      </section>
+
+
+    </div>
+
+  </main><!-- /.container -->
+
+{% endblock %}

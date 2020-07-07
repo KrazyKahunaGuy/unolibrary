@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}New Author{% endblock %}
+
+{% block body %}
+
+  <main role="main" class="container">
+
+    
+    <div class="book-form">
+      <div class="head">
+      <h1>Add a new author</h1>
+      <p class="lead">Fill the form below<br></p>
+    </div>
+
+      <!-- End Off-Canvas Navigation Section -->
+      <form action="{{ url_for('pages.new_author_post') }}" method="POST">
+      <div class="form-group">
+        <label for="author-name">Author</label>
+        <input type="text" class="form-control" id="author-name" name="author-name" placeholder="Name of the author">
+      </div>
+      <div class="form-group">
+        <label for="desc">Bio</label>
+        <textarea class="form-control" id="desc" name="bio" rows="10"></textarea>
+      </div>
+   
+      <div class="addAuthorbtn">
+      <button type="submit" class="btn btn-primary btn-md, active">Add Author</button>
+      </div>
+      
+      </div>
+  </form>
+          
+      
+
+  </main><!-- /.container -->
+
+{% endblock %}

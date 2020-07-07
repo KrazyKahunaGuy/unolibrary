@@ -1,0 +1,36 @@
+body {
+  padding-top: 5rem;
+}
+
+.intro {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.dropdown:hover,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.intro h1 span {
+	color: #b3d9ff;
+}
+
+.selectpicker:hover,
+.selectpicker:focus-within .dropdown-menu {
+	display: block;
+}
+
+.dropdown:hover,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+#paginate {
+  margin: auto;
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 100px;
+}

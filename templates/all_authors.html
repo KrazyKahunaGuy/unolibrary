@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}All Authors{% endblock %}
+
+{% block body %}
+
+  <main role="main" class="container">
+
+    <div class="intro">
+      <h1>Available Authors</h1>
+      <p class="lead">This are the authors currently present in our collection<br> Browse through.</p>
+    </div>
+      <section id="all-authors" class="all-authors-section">
+          <div class="container">
+              <div class="row">
+                {% for author in authors %}
+
+                  <div class="col-md-10 col-sm-10" id=paginate>
+                      <div class="all-author-section text-center waves-effect">
+                          <h4>{{ author.author_name }}</h4>
+                          <div class="border"></div>
+                          <p>{{ author.bio }}</p>
+                      </div>
+                  </div>
+                {% endfor %}
+
+                  
+              </div><!-- /.row -->            
+              
+          </div><!-- /.container -->
+      </section>
+
+
+    </div>
+
+  </main><!-- /.container -->
+
+{% endblock %}
